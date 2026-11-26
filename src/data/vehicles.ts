@@ -1,0 +1,173 @@
+import type { Category, Transmission, Vehicle } from '../types/vehicle'
+
+const photo = (id: string, w = 1200) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`
+
+export const HERO_IMAGE = photo('1580273916550-e323be2ae537', 1920)
+
+export const categoryLabels: Record<Category, string> = {
+  hatch: 'Hatch',
+  sedan: 'Sedan',
+  suv: 'SUV',
+  picape: 'Picape',
+}
+
+export const transmissionLabels: Record<Transmission, string> = {
+  manual: 'Manual',
+  automatico: 'Automático',
+}
+
+export const PRICE_STEPS = [70000, 100000, 130000, 160000, 220000]
+export const MIN_YEARS = [2019, 2020, 2021, 2022, 2023]
+
+// Dados fictícios, apenas para demonstração.
+export const vehicles: Vehicle[] = [
+  {
+    id: 'corolla-xei-2021',
+    brand: 'Toyota',
+    model: 'Corolla',
+    version: 'XEi 2.0 Flex',
+    year: 2021,
+    km: 52000,
+    price: 124900,
+    category: 'sedan',
+    transmission: 'automatico',
+    fuel: 'Flex',
+    image: 'https://cdn.gazetasp.com.br/img/c/825/500/dn_arquivo/jpg/2020/07/22/de210720b-632683.jpg',
+    featured: true,
+    highlights: ['Central multimídia', 'Câmera de ré', 'Ar-condicionado digital', 'Sensores de estacionamento'],
+  },
+  {
+    id: 'civic-exl-2019',
+    brand: 'Honda',
+    model: 'Civic',
+    version: 'EXL 2.0 Flex',
+    year: 2019,
+    km: 68000,
+    price: 109900,
+    category: 'sedan',
+    transmission: 'automatico',
+    fuel: 'Flex',
+    image: 'https://image.webmotors.com.br/_fotos/anunciousados/gigante/2026/202603/20260319/honda-civic-2.0-16v-flexone-exl-4p-cvt-wmimagem11580614845.jpg',
+    highlights: ['Bancos em couro', 'Teto solar', 'Chave presencial', 'Faróis em LED'],
+  },
+  {
+    id: 'tcross-highline-2022',
+    brand: 'Volkswagen',
+    model: 'T-Cross',
+    version: 'Highline 1.4 TSI',
+    year: 2022,
+    km: 38000,
+    price: 134900,
+    category: 'suv',
+    transmission: 'automatico',
+    fuel: 'Flex',
+    image: 'https://images.usadosbr.com/media/gallery/1e/98/d2/volkswagen-t-cross-1-4-250-tsi-highline-2022-florianopolis-sc-4d8d54f5-Z7.webp',
+    featured: true,
+    highlights: ['Painel digital', 'Carregador sem fio', 'Piloto automático', 'Rodas de liga 17"'],
+  },
+  {
+    id: 'compass-longitude-2022',
+    brand: 'Jeep',
+    model: 'Compass',
+    version: 'Longitude 1.3 T270',
+    year: 2022,
+    km: 41000,
+    price: 142900,
+    category: 'suv',
+    transmission: 'automatico',
+    fuel: 'Flex',
+    image: 'https://carroesporteclube.com.br/wp-content/uploads/2021/05/Jeep-Compass-Longitude-2022-foto-Thiago-Ventura-Carro-Esporte-Clube7.jpg',
+    featured: true,
+    highlights: ['Tela de 10,1"', 'Bancos com ajuste elétrico', 'Câmera de ré', 'Partida por botão'],
+  },
+  {
+    id: 'hb20-comfort-2021',
+    brand: 'Hyundai',
+    model: 'HB20',
+    version: 'Comfort 1.0 Flex',
+    year: 2021,
+    km: 47000,
+    price: 62900,
+    category: 'hatch',
+    transmission: 'manual',
+    fuel: 'Flex',
+    image: 'https://cdn.motor1.com/images/mgl/J4p1g/s1/hyundai-hb20-1.0-sense-2021-motor1.jpg',
+    highlights: ['Direção elétrica', 'Vidros elétricos', 'Central multimídia', 'Econômico na cidade'],
+  },
+  {
+    id: 'onix-ltz-2020',
+    brand: 'Chevrolet',
+    model: 'Onix',
+    version: 'LTZ 1.0 Turbo',
+    year: 2020,
+    km: 59000,
+    price: 69900,
+    category: 'hatch',
+    transmission: 'automatico',
+    fuel: 'Flex',
+    image: 'https://www.autocerto.com/fotos/245/941919/1.jpg',
+    highlights: ['Motor turbo', 'Wi-Fi nativo', 'Ar-condicionado', 'Câmbio automático'],
+  },
+  {
+    id: 'toro-freedom-2022',
+    brand: 'Fiat',
+    model: 'Toro',
+    version: 'Freedom 1.3 T270',
+    year: 2022,
+    km: 36000,
+    price: 139900,
+    category: 'picape',
+    transmission: 'automatico',
+    fuel: 'Flex',
+    image: 'https://www.comprecar.com.br/storage/vehicles/big/1e209a67-4248-4a87-a10e-9bde1220243e.webp',
+    featured: true,
+    highlights: ['Caçamba com tampa', 'Multimídia 7"', 'Controle de tração', 'Sensor de chuva'],
+  },
+  {
+    id: 'hilux-srv-2020',
+    brand: 'Toyota',
+    model: 'Hilux',
+    version: 'SRV 2.8 4x4 Diesel',
+    year: 2020,
+    km: 82000,
+    price: 219900,
+    category: 'picape',
+    transmission: 'automatico',
+    fuel: 'Diesel',
+    image: 'https://conteudo.imguol.com.br/c/entretenimento/8d/2019/01/15/toyota-hilux-srv-flex-1547566458638_v2_4x3.jpg',
+    highlights: ['Tração 4x4', 'Bancos em couro', 'Controle de estabilidade', 'Câmera de ré'],
+  },
+  {
+    id: 'polo-track-2023',
+    brand: 'Volkswagen',
+    model: 'Polo',
+    version: 'Track 1.0 Flex',
+    year: 2023,
+    km: 21000,
+    price: 74900,
+    category: 'hatch',
+    transmission: 'manual',
+    fuel: 'Flex',
+    image: 'https://cdn.autopapo.com.br/box/uploads/2023/02/17205743/volkswagen-polo-track-2023-prata-frente-parado-em-gramado-1920x1280.jpg',
+    highlights: ['Baixa quilometragem', 'Ar-condicionado', 'Direção elétrica', 'Multimídia'],
+  },
+  {
+    id: 'duster-iconic-2021',
+    brand: 'Renault',
+    model: 'Duster',
+    version: 'Iconic 1.6 Flex',
+    year: 2021,
+    km: 54000,
+    price: 89900,
+    category: 'suv',
+    transmission: 'manual',
+    fuel: 'Flex',
+    image: 'https://midias.agazeta.com.br/2020/11/23/renault-duster-iconic-cvt-x-tronic-366919-article.jpg',
+    highlights: ['Altura do solo elevada', 'Multimídia', 'Câmera de ré', 'Rodas de liga'],
+  },
+]
+
+export const brands = [...new Set(vehicles.map((v) => v.brand))].sort()
+export const modelsByBrand = (brand: string) =>
+  [...new Set(vehicles.filter((v) => !brand || v.brand === brand).map((v) => v.model))].sort()
+export const getVehicleById = (id: string | undefined) => vehicles.find((v) => v.id === id)

@@ -1,0 +1,18 @@
+export const stores = [
+  'Seu Carro Nova Iguaçu - Dutra',
+  'Seu Carro Intendente Magalhães',
+  'Seu Carro Niterói',
+  'Seu Carro Barra Mansa',
+  'Seu Carro Campo Grande',
+  'Seu Carro Duque de Caxias',
+  'Seu Carro Vila Prudente',
+  'Seu Carro Osasco',
+  'Seu Carro Santo Amaro',
+  'Seu Carro São Bernardo do Campo',
+  'Seu Carro São Miguel',
+  'Seu Carro Mogi das Cruzes',
+  'Seu Carro Limeira',
+  'Seu Carro Piracicaba',
+  'Seu Carro Campinas',
+  'Seu Carro Indaiatuba',
+]
